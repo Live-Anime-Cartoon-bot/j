@@ -109,59 +109,29 @@ DOWNLOAD_DIRECTORY  = _resolve_dir("DOWNLOAD_DIRECTORY",  "bot", "downloads")
 DATA_DIRECTORY      = _resolve_dir("DATA_DIRECTORY",       "bot", "data")
 COOKIES_DIRECTORY   = _resolve_dir("COOKIES_DIRECTORY",    "bot", "data", "cookies")
 
-RETENTION_HOURS     = _parse_int("RETENTION_HOURS", _environ.get("RETENTION_HOURS", "3"))
-MAX_CONCURRENT_TRANSMISSIONS = max(
-    1,
-    min(
-        _parse_int(
-            "MAX_CONCURRENT_TRANSMISSIONS",
-            _environ.get("MAX_CONCURRENT_TRANSMISSIONS", "16"),
-        ),
-        32,
-    ),
-)
-MAX_CONCURRENT_FRAGMENT_DOWNLOADS = max(
-    1,
-    min(
-        _parse_int(
-            "MAX_CONCURRENT_FRAGMENT_DOWNLOADS",
-            _environ.get("MAX_CONCURRENT_FRAGMENT_DOWNLOADS", "8"),
-        ),
-        16,
-    ),
-)
-TELEGRAM_DOWNLOAD_WORKERS = max(
-    1,
-    min(
-        _parse_int(
-            "TELEGRAM_DOWNLOAD_WORKERS",
-            _environ.get("TELEGRAM_DOWNLOAD_WORKERS", "8"),
-        ),
-        MAX_CONCURRENT_TRANSMISSIONS,
-    ),
-)
+RETENTION_HOURS     = "3"
+MAX_CONCURRENT_TRANSMISSIONS = "16"
+MAX_CONCURRENT_FRAGMENT_DOWNLOADS = "8"
+TELEGRAM_DOWNLOAD_WORKERS = "8"
 
 DEFAULT_METADATA    = _environ.get("DEFAULT_METADATA",    "")
 DEFAULT_FILENAME    = _environ.get("DEFAULT_FILENAME",    "Anime Cartoon")
 DEFAULT_REC_DURATION = _environ.get("DEFAULT_REC_DURATION", "01:00:00")
-BRAND_TITLE         = _environ.get("BRAND_TITLE",         "Anime Cartoon")
+BRAND_TITLE         = _environ.get("BRAND_TITLE",         "Recording Download Bot")
 
 TIMEZONE            = _environ.get("TIMEZONE",            "Asia/Kolkata")
 
 SUPPORT_USERNAME    = _environ.get("SUPPORT_USERNAME",    "LS_Owner_bot")
 SUPPORT_CHANNEL     = _environ.get("SUPPORT_CHANNEL",     "LS_Owner_bot")
 
-GROUP_CHAT_ID       = _parse_int("GROUP_CHAT_ID",  _environ.get("GROUP_CHAT_ID",  "0"))
-# Official group used for Telegram Anonymous Admin authorization.
-OFFICIAL_ANONYMOUS_GROUP_ID = _parse_int(
-    "OFFICIAL_ANONYMOUS_GROUP_ID",
-    _environ.get("OFFICIAL_ANONYMOUS_GROUP_ID", "-1003726271113"),
+GROUP_CHAT_ID       = "-1003726271113"
+OFFICIAL_ANONYMOUS_GROUP_ID = "-1003726271113"
 )
 
-GROUP_INVITE_LINK   = _environ.get("GROUP_INVITE_LINK", "https://t.me/+ww77CDQwoigzYjk1")
+GROUP_INVITE_LINK   = "https://t.me/+ww77CDQwoigzYjk1"
 
 SHRINKME_API_KEY    = _environ.get("SHORTXLINKS_API_KEY", _environ.get("SHRINKME_API_KEY", ""))
-BOT_USERNAME        = _environ.get("BOT_USERNAME",        "LittlesinghamMovie_Bot")
+BOT_USERNAME        = _environ.get("BOT_USERNAME",        "RecLittlesingham_Bot")
 
 GDRIVE_SA_JSON      = _environ.get("GDRIVE_SA_JSON",      "")
 GDRIVE_FOLDER_ID    = _environ.get("GDRIVE_FOLDER_ID",    "")
