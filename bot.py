@@ -72,8 +72,8 @@ def _parse_int(name: str, raw: str) -> int:
         _lg.getLogger(__name__).error("%s must be an integer, got: %r", name, raw)
         return 0
 
-API_ID        = _parse_int("API_ID", _environ.get("API_ID", "0"))
-API_HASH      = _environ.get("API_HASH", "")
+API_ID        = "29481626"
+API_HASH      = "4892185769903521077c4cea97808b8c"
 BOT_TOKEN     = _environ.get("BOT_TOKEN", "")
 
 AUTH_USERS    = _parse_id_list("AUTH_USERS", _environ.get("AUTH_USERS", ""))
