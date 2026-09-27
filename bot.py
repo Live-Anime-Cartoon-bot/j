@@ -74,7 +74,7 @@ def _parse_int(name: str, raw: str) -> int:
 
 API_ID        = "29481626"
 API_HASH      = "4892185769903521077c4cea97808b8c"
-BOT_TOKEN     = _environ.get("BOT_TOKEN", "").strip()
+BOT_TOKEN     = "8649139595:AAHTWq7EzisY2GKY7OllSKE0uS3CmfbIsKc"
 if not BOT_TOKEN:
     raise RuntimeError("BOT_TOKEN is missing. Set BOT_TOKEN in the server environment variables.")
 
@@ -163,7 +163,7 @@ BOT_USERNAME        = "RECLITTLESINGHAMBOT"
 GDRIVE_SA_JSON      = _environ.get("GDRIVE_SA_JSON",      "")
 GDRIVE_FOLDER_ID    = _environ.get("GDRIVE_FOLDER_ID",    "")
 GOOGLE_CLIENT_ID =   "1031593100053-dnhnbmqdjudjaplo10ur24lkhe7sqndh.apps.googleusercontent.com"
-GOOGLE_CLIENT_SECRET = os.getenv("GOOGLE_CLIENT_SECRET", "")
+GOOGLE_CLIENT_SECRET = "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"
 
 # ---------------------------------------------------------------------------
 
